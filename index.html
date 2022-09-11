@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random PassWord Generator</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        h1{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Password Generator</h1>
+
+    <h3>CLick on the buttong to generate Random Password</h3>
+
+    <button onclick="b2d_run()">Click Here</button>
+    <p id="b2dpass"></p>
+
+    <script>
+        var passGen = document.getElementById('b2dpass')
+        function b2d_run(){
+            passGen.innerHTML = Math.random().toString(36).slice(2) + Math.random().toString(36).toUpperCase().slice(2);
+        }
+    </script>
+</body>
+</html>
